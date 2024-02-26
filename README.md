@@ -1,10 +1,8 @@
-Certainly! Below is a template for a README file for a restaurant recommendation program:
 
----
 
 # Restaurant Recommendation Program
 
-Welcome to our Restaurant Recommendation Program! This program helps users discover delicious dining options in their area based on cuisine preferences, ratings, and price range.
+Welcome to our Restaurant Recommendation Program! This program helps users discover delicious dining options in the Greensboro NC area based on cuisine preferences, ratings, and price range.
 
 ## Table of Contents
 
