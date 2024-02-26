@@ -24,4 +24,11 @@ restaurant_data = [['american', "Liberty Oak", '4', '4', '100 W Washington St'],
                    ['chinese', 'Phoenix Asian Cuisine', '4.3', '2', '1641 New Garden Rd Ste 111'],
                    ['american', 'Emma Key’s Flat-Top Grill', '4.5', '2', '2206 Walker Ave'],
                    ['cafe', 'Green Bean', '4.6', '2', '341 S Elm St'],
-                   ['american', 'Iron Hen Cafe', '4.5', '3', '908 Cridland Rd']]
+                   ['american', 'Iron Hen Cafe', '4.5', '3', '908 Cridland Rd'],
+                   ['american', 'Darryls Wood Fired Grill', '4.6', '4', '3300 High Point Rd'],
+                   ['italian', 'Villa Rosa Italian Restaurant', '4.5', '3', '6019 W Market St'],
+                   ['american', 'The Old Town Draught House', '4.5', '2', '1205 Spring Garden St'],
+                   ['barbecue', 'Country BBQ', '4.4', '2', '4012 W Wendover Ave'],
+                   ['chinese', 'PF Chang’s', '4.4', '3', '3338 W Friendly Ave'],
+                   ['american', 'Biscuitville', '4.3', '1', '3011 Spring Garden St'],
+                   ['mexican', 'El Camino Real Mexican Grill', '4.3', '2', '413 Pisgah Church Rd']]
