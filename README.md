@@ -10,7 +10,6 @@ Welcome to our Restaurant Recommendation Program! This program helps users disco
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
@@ -54,16 +53,6 @@ Choosing a restaurant for your next meal can be a daunting task, especially with
 
 4. Enjoy your dining experience at the recommended restaurant!
 
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/yourfeature`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature/yourfeature`).
-6. Create a new Pull Request.
 
 ## License
 
