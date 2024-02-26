@@ -1,15 +1,27 @@
 types = ['german', 'japanese', 'vegetarian', 'french', 'african', 'american', 'barbecue', 'czech', 'chinese', 'thai',
-         'mexican', 'indian', 'cafe', 'pizza', 'italian','mediterranean']
+         'mexican', 'indian', 'cafe', 'pizza', 'italian', 'mediterranean']
 
 restaurant_data = [['american', "Liberty Oak", '4', '4', '100 W Washington St'],
-                   ['japanese', 'Sushi Republic','5', '4', '329 Tate St'],
-                   ['mediterranean','Sarahs Kabob Shop','5','5','5340 W Market St'],
-                   ['mexican','Crafted: The Art of the Taco','4.5','5','200 South Elm Street'],
-                   ['pizza', 'Crafted: The Art of Pizza','4.5','4.5','220 South Elm Street'],
-                   ['american','1618 Downtown','4.6','3','312 Elm St'],
-
-
-
-
-
-                   ]
+                   ['japanese', 'Sushi Republic', '5', '4', '329 Tate St'],
+                   ['mediterranean', 'Sarahs Kabob Shop', '5', '5', '5340 W Market St'],
+                   ['mexican', 'Crafted: The Art of the Taco', '4.5', '5', '200 South Elm Street'],
+                   ['pizza', 'Crafted: The Art of Pizza', '4.5', '4.5', '220 South Elm Street'],
+                   ['american', '1618 Downtown', '4.6', '3', '312 Elm St'],
+                   ['french', 'Print Works Bistro', '4.6', '4', '702 Green Valley Road'],
+                   ['american', 'Crafted - The Art of Street Food', '4.6', '2', '220 South Elm Street'],
+                   ['american', 'Lindley Park Filling Station', '4.6', '2', '2201 Walker Ave'],
+                   ['american', "Dame's Chicken & Waffles", '4.6', '1', '301 Martin Luther King Jr Dr'],
+                   ['american', "B. Christopher's Steakhouse", '4.5', '4', '201 North Elm Street'],
+                   ['japanese', 'Sushi Republic', '4.5', '2', '329 Tate Street'],
+                   ['mexican', 'Crafted - The Art of the Taco', '4.5', '2', '220 South Elm Street'],
+                   ['mediterranean', 'Green Valley Grill', '4.5', '4', '622 Green Valley Road'],
+                   ['italian', 'Crafted - The Art of Pizza', '4.5', '2', '220 South Elm Street'],
+                   ['barbecue', 'Stamey’s Barbecue', '4.6', '3', '2812 Battleground Ave'],
+                   ['american', 'Hops Burger Bar', '4.6', '3', '2419 Spring Garden St'],
+                   ['thai', 'Taste of Thai', '4.4', '2', '1500 Mill St Ste 104'],
+                   ['indian', 'Dhanraj Emanuel Restaurant', '4.6', '2', '324 S Elm St'],
+                   ['italian', 'Osteria Italian Restaurant', '4.6', '4', '1310 Westover Ter Ste 111'],
+                   ['chinese', 'Phoenix Asian Cuisine', '4.3', '2', '1641 New Garden Rd Ste 111'],
+                   ['american', 'Emma Key’s Flat-Top Grill', '4.5', '2', '2206 Walker Ave'],
+                   ['cafe', 'Green Bean', '4.6', '2', '341 S Elm St'],
+                   ['american', 'Iron Hen Cafe', '4.5', '3', '908 Cridland Rd']]
