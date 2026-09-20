@@ -1,30 +1,21 @@
-"""PLATE recommendation engine adapted from the original prefix-match program.
-
-The original dataset is preserved as-is. Columns are cuisine, name, price, rating,
-address according to the original print statements; values are historical,
-user-curated data and are NOT live prices or verified ratings.
-"""
+"""PLATE recommendations: original cuisine-prefix logic plus optional filters."""
 from restaurantData import restaurant_data, types
-
 
 def cuisines(prefix=""):
     prefix = prefix.strip().casefold()
     return [name for name in types if name.casefold().startswith(prefix)]
 
-
 def recommend(cuisine="", max_price=None, min_rating=None, search=""):
-    cuisine = cuisine.strip().casefold()
-    search = search.strip().casefold()
+    cuisine, search = cuisine.strip().casefold(), search.strip().casefold()
     matches = []
-    for index, record in enumerate(restaurant_data):
-        kind, name, price_text, rating_text, address = record
-        # The source dataset has contradictory entries; never merge them blindly.
-        price, rating = float(price_text), float(rating_text)
+    for index, (kind, name, price_value, rating_value, address) in enumerate(restaurant_data):
+        price = float(price_value) if price_value is not None else None
+        rating = float(rating_value) if rating_value is not None else None
         if cuisine and not kind.casefold().startswith(cuisine):
             continue
-        if max_price is not None and price > max_price:
+        if max_price is not None and (price is None or price > max_price):
             continue
-        if min_rating is not None and rating < min_rating:
+        if min_rating is not None and (rating is None or rating < min_rating):
             continue
         if search and search not in f"{name} {kind} {address}".casefold():
             continue

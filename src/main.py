@@ -27,6 +27,6 @@ def get_recommendations(
 ):
     matches = recommend(cuisine, max_price, min_rating, search)
     return {"count": len(matches), "restaurants": matches,
-            "note": "Historical project dataset; restaurant details, prices and ratings are unverified."}
+            "note": "Original price/rating scores are historical and unverified; new listings have unknown price/rating and are excluded from filters requiring those values. Confirm restaurant details before visiting."}
 
 Default = asgi.entrypoint(app)

@@ -53,7 +53,7 @@ function render() {
     art.setAttribute("aria-hidden", "true");
     const content = document.createElement("div"); content.className = "content";
     const meta = document.createElement("div"); meta.className = "meta";
-    meta.textContent = `${r.cuisine} · Price ${r.price}/5 · ★ ${r.rating}/5`;
+    meta.textContent = `${r.cuisine} · ${r.price == null ? "Price not verified" : `Historic price ${r.price}/5`} · ${r.rating == null ? "Rating not verified" : `Historic rating ★ ${r.rating}/5`}`;
     const title = document.createElement("h3"); title.textContent = r.name;
     const address = document.createElement("p"); address.textContent = r.address + ", Greensboro, NC (historical listing)";
     const footer = document.createElement("div"); footer.className = "footer";
