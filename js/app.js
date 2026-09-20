@@ -49,7 +49,10 @@ function render() {
     const article = document.createElement("article"); article.className = "restaurant";
     const art = document.createElement("div"); art.className = "art";
     art.style.setProperty("--tone", tones[r.id % tones.length]);
-    art.textContent = emojiByCuisine[r.cuisine.toLowerCase()] || "🍽️";
+    const foodIcon = document.createElement("span");
+    foodIcon.className = "food-icon";
+    foodIcon.textContent = emojiByCuisine[r.cuisine.toLowerCase()] || "🍽️";
+    art.append(foodIcon);
     art.setAttribute("aria-hidden", "true");
     const content = document.createElement("div"); content.className = "content";
     const meta = document.createElement("div"); meta.className = "meta";
