@@ -5,10 +5,32 @@ A GitHub Pages frontend powered by a Cloudflare Python Worker API. Based on the 
 ## Source data and scope
 
 - `original/` preserves the two supplied Python files verbatim.
-- `src/restaurantData.py` is a verbatim copy of the original dataset; edit that file to update the API data.
+- `src/restaurantData.py` starts with the original dataset verbatim; later listings are appended after it (see *Finding more restaurants*). Edit that file to update the API data.
 - The original script uses `restaurant[2]` as **price** and `restaurant[3]` as **rating**; we retain those columns exactly, even though some values look swapped and some names repeat. No deduplication, invented data, or verification.
 - The original filters cuisine using a case-insensitive `startswith` match (twice via user input). The API retains case-insensitive prefix matching, adds optional price-score and minimum-rating filters, and keyword search.
 - The 1–5 price number is not a dollar amount. Historical addresses, ratings and restaurant status are **not verified**.
+
+## Finding more restaurants
+
+`tools/find_restaurants.py` pulls Greensboro restaurants, cafés and fast-food spots from
+[OpenStreetMap](https://www.openstreetmap.org/) via the public Overpass API. It does not scrape
+review sites (Yelp, Google and TripAdvisor forbid it), and it never invents ratings or prices:
+new listings get `None` for both, which the API already treats as unknown.
+
+```
+python tools/find_restaurants.py            # dry run: writes data/osm_candidates.csv to review
+python tools/find_restaurants.py --apply    # append the new listings to src/restaurantData.py
+```
+
+- Only the city of Greensboro, NC (the boundary is scoped to North Carolina; other states have a Greensboro too).
+- Skips brand-tagged chains (use `--include-chains` to keep them), places without a street address or a
+  recognisable cuisine, lounges and campus dining halls, and anything already listed (by name, or by
+  name plus street address, so "Seoul Garden" at 5318 W Market matches "Seoul Garden Restaurant").
+- Rows are only appended, because the frontend stores favorites by row index. Each new row's
+  OpenStreetMap link goes into `listing_sources`.
+- OpenStreetMap data is ODbL-licensed: keep the "© OpenStreetMap contributors" credit in the site footer.
+- If Python reports `CERTIFICATE_VERIFY_FAILED`, `pip install certifi`; the script uses it when available.
+- The new data reaches the live site only after the Worker is redeployed (see Deploy below).
 
 ## Local development (Windows PowerShell)
 

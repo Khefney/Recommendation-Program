@@ -21,6 +21,8 @@ dist-ssr
 .dev.vars
 .venv/
 python_modules/
+# Restaurant finder review files (regenerate with tools/find_restaurants.py)
+data/
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
